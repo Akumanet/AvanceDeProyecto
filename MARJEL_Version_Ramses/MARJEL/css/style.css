@@ -1,0 +1,357 @@
+:root {
+    --fondo: #f8f7f4;
+    --blanco: #ffffff;
+    --negro: #282522;
+    --cafe: #6b5146;
+    --gris: #77716d;
+    --borde: #e4e0dc;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; 
+}
+
+
+body {
+    margin: 0;
+    background-color: var(--fondo);
+    color: var(--negro);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.2;
+    font-weight: normal;
+}
+
+h1 { font-size: 5.8rem; }
+h2 { font-size: 3.6rem; }
+h3 { font-size: 2.4rem; }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    color: var(--gris);
+}
+
+/* Encabezado y menú */
+.aviso {
+    background-color: var(--negro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 9px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.barra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 24px 0;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.navegacion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.navegacion a {
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.navegacion a:hover,
+.navegacion a[aria-current="page"] {
+    color: var(--cafe);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+/* Portada */
+.portada {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 480px;
+    background-color: #efebe6;
+}
+
+.portada__texto {
+    padding: 70px 12%;
+    align-self: center;
+}
+
+.portada h1 {
+    margin: 15px 0;
+}
+
+.etiqueta {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--cafe);
+}
+
+.boton {
+    display: inline-block;
+    background-color: var(--negro);
+    border: 1px solid var(--negro);
+    color: var(--blanco);
+    padding: 12px 25px;
+    margin-top: 15px;
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: var(--cafe);
+    border-color: var(--cafe);
+}
+
+.boton--claro {
+    background-color: transparent;
+    color: var(--negro);
+}
+
+/* fotos del local/ropa/muestras del inventario etc. */
+.foto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    color: #a7a29e;
+    padding: 20px;
+    font-size: 13px;
+    aspect-ratio: 3 / 4;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.foto--portada {
+    min-height: 480px;
+    aspect-ratio: auto;
+}
+
+.foto--ancha {
+    aspect-ratio: 5/ 3;
+}
+
+/* Secciones y tarjetas */
+.seccion {
+    padding: 60px 0;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin: 0 0 32px;
+}
+
+.titulo-seccion p {
+    margin: 5px 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tarjeta h3 {
+    margin: 15px 0 4px;
+}
+
+.tarjeta p {
+    margin: 3px 0;
+    font-size: 14px;
+}
+
+.precio {
+    color: var(--negro);
+    font-weight: bold;
+}
+
+.precio-anterior {
+    color: var(--gris);
+    text-decoration: line-through;
+    margin-right: 8px;
+}
+
+.enlace {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--cafe);
+    border-bottom: 1px solid var(--cafe);
+    font-size: 14px;
+}
+
+/* Páginas interiores */
+.encabezado-pagina {
+    padding: 45px 0 25px;
+    text-align: center;
+}
+
+.encabezado-pagina h1 {
+    margin: 0;
+    font-size: 48px;
+}
+
+.contenido-dos-columnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.caja {
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    padding: 30px;
+}
+
+.caja h2 {
+    margin-top: 0;
+}
+
+.dato {
+    border-bottom: 1px solid var(--borde);
+    padding: 12px 0;
+}
+
+/* Formulario de ejemplo, sin envío */
+.formulario {
+    max-width: 680px;
+    margin: 0 auto;
+    background-color: var(--blanco);
+    padding: 35px;
+    border: 1px solid var(--borde);
+}
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.campo input,
+.campo textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--borde);
+    background-color: #fff;
+    font: inherit;
+}
+
+.campo textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.aviso-formulario {
+    font-size: 12px;
+}
+
+.footer {
+    background-color: var(--negro);
+    color: var(--blanco);
+    margin-top: 40px;
+    padding: 30px 0;
+}
+
+.footer .barra {
+    padding: 0;
+}
+
+.footer p {
+    color: #d3d0ce;
+    margin: 0;
+    font-size: 12px;
+}
+
+.footer .navegacion a:hover {
+    color: #fff;
+}
+
+/*tablet */
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .portada h1 {
+        font-size: 4.4rem;
+    }
+    .barra {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .navegacion {
+        justify-content: center;
+    }
+}
+
+/*celular */
+@media (max-width: 600px) { /*max-width 600 es mejor que min-width 768 para recibir una mejor calificacion para mobiles en lighthouse */
+    .portada,
+    .contenido-dos-columnas,
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .portada__texto {
+        padding: 40px 8%;
+    }
+    .portada h1,
+    .encabezado-pagina h1 {
+        font-size: 3.8rem;
+    }
+    .foto--portada {
+        min-height: 300px;
+    }
+    .seccion {
+        padding: 35px 0;
+    }
+    .navegacion {
+        gap: 1.2rem 1.8rem;
+    }
+    .navegacion a {
+        font-size: 1.2rem;
+    }
+    .formulario {
+        padding: 2rem;
+    }
+}
