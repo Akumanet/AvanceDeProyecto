@@ -355,3 +355,125 @@ p {
         padding: 2rem;
     }
 }
+
+
+/* ===== Animaciones ===== */
+
+/* Menú fijo de lado a lado */
+header.contenedor {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background-color: var(--fondo);
+    transition: transform .4s ease, box-shadow .3s ease;
+}
+
+header.contenedor .barra {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header.contenedor.sombra {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+}
+
+header.contenedor.oculto {
+    transform: translateY(-110%);
+}
+
+/* Línea animada bajo los enlaces del menú */
+.navegacion a {
+    position: relative;
+    text-decoration: none;
+}
+
+.navegacion a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .35s ease;
+}
+
+.navegacion a:hover::after,
+.navegacion a[aria-current="page"]::after {
+    transform: scaleX(1);
+}
+
+/* Botones y enlaces */
+.boton,
+.enlace {
+    transition: transform .3s ease, background-color .3s ease, color .3s ease;
+}
+
+.boton:hover {
+    transform: translateY(-3px);
+}
+
+.enlace:hover {
+    transform: translateX(4px);
+}
+
+/* Entrada de la página */
+body {
+    animation: entrar .6s ease both;
+}
+
+@keyframes entrar {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Aparecer al hacer scroll (la clase .rv la agrega js/script.js) */
+.rv {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity .9s ease, transform .9s ease;
+    transition-delay: var(--retraso, 0s);
+}
+
+.rv.visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* imagenes disminuida*/
+.foto {
+    overflow: hidden;
+}
+
+.foto img.carga {
+    opacity: 0;
+    filter: blur(16px);
+    transform: scale(1.06);
+    transition: opacity .9s ease, filter .9s ease, transform 1.2s ease;
+}
+
+.foto img.carga.lista {
+    opacity: 1;
+    filter: none;
+    transform: none;
+}
+
+.tarjeta:hover .foto img.carga.lista {
+    transform: scale(1.045);
+}
+
+.foto--portada img.carga.lista {
+    animation: zoom-lento 16s ease-in-out infinite alternate;
+}
+
+@keyframes zoom-lento {
+    from { transform: scale(1); }
+    to { transform: scale(1.06); }
+}
+
