@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MARJEL: tienda de ropa y moda. Proyecto de demostración.">
+    <title>Ofertas | MARJEL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+</head>
+<body>
+    <div class="aviso">MARJEL · ESTILO PARA CADA DÍA</div>
+    <header class="contenedor">
+        <div class="barra">
+            <a class="logo" href="index.html">MARJEL</a>
+            <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="navegacion" id="menu-principal" aria-label="Menú principal">
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="ofertas.html" aria-current="page">Ofertas</a>
+                <a href="preguntas.html">Preguntas</a>
+                <a href="ubicacion.html">Ubicación</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+    <main class="contenedor">
+        <div class="encabezado-pagina">
+            <span class="etiqueta">Oportunidades especiales</span>
+            <h1>Ofertas</h1>
+            <p>Una selección de prendas con precios especiales de ejemplo.</p>
+        </div>
+        <section class="seccion">
+            <div class="grid">
+                <article class="tarjeta">
+                    <div class="foto"><img src="img/ropa06.png" alt="Camisa de lino"></div>
+                    <h3>Camisa de lino</h3>
+                    <p>Ligera y fácil de combinar.</p>
+                    <p><span class="precio-anterior">$499</span><span class="precio">$399 MXN</span></p>
+                    <button class="detalle-boton" type="button" aria-expanded="false" aria-controls="oferta-camisa">Ver detalles</button>
+                    <div class="desplegable detalle" id="oferta-camisa">
+                        <div>
+                            <p>El lino respira bien y se siente fresco aunque haga calor. Es normal que se arrugue un poco, es parte de su estilo. Si la quieres más lisa, pásale la plancha de vapor.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <div class="foto"><img src="img/ropa07.png" alt="Vestido de verano"></div>
+                    <h3>Vestido de verano</h3>
+                    <p>Un estilo cómodo para el día.</p>
+                    <p><span class="precio-anterior">$650</span><span class="precio">$520 MXN</span></p>
+                    <button class="detalle-boton" type="button" aria-expanded="false" aria-controls="oferta-vestido">Ver detalles</button>
+                    <div class="desplegable detalle" id="oferta-vestido">
+                        <div>
+                            <p>Tirantes ajustables, falda con vuelo y una tela fresca que no se pega. Lo hicimos pensando en los días de calor: salir a caminar, comer con calma, quedarse un rato más en la plaza.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <div class="foto"><img src="img/ropa05.png" alt="Jeans rectos"></div>
+                    <h3>Jeans rectos</h3>
+                    <p>Un básico para cualquier ocasión.</p>
+                    <p><span class="precio-anterior">$580</span><span class="precio">$460 MXN</span></p>
+                    <button class="detalle-boton" type="button" aria-expanded="false" aria-controls="oferta-jeans">Ver detalles</button>
+                    <div class="desplegable detalle" id="oferta-jeans">
+                        <div>
+                            <p>Mezclilla de peso medio, corte recto y cinco bolsas. Al principio se sienten un poco firmes, pero ceden con los primeros lavados. Del revés y con agua fría conservan mejor el color.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="contenido-dos-columnas">
+                <div class="caja">
+                    <span class="etiqueta">Tu estilo, tu elección</span>
+                    <h2>Conoce toda la colección</h2>
+                    <p>Además de nuestras ofertas, puedes consultar el resto de las prendas disponibles en la propuesta.</p>
+                    <a class="boton" href="catalogo.html">Ir al catálogo</a>
+                </div>
+                <div class="foto foto--ancha"><img src="img/ropa08.png" alt="Colección de ropa"></div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="contenedor barra">
+            <a class="logo" href="index.html">MARJEL</a>
+            <div>
+                <p>Propuesta de tienda de ropa · Proyecto escolar</p>
+                <p>Las prendas y los precios son ejemplos de diseño.</p>
+            </div>
+        </div>
+    </footer>
+    <div class="flotantes">
+        <a class="flotante flotante--llamar" href="tel:+5217861313423" aria-label="Llamar a MARJEL">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Llamar</span>
+        </a>
+        <button class="flotante flotante--subir" type="button" aria-label="Volver arriba">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+        </button>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

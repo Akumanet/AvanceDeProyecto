@@ -1,0 +1,882 @@
+:root {
+    --fondo: #f8f7f4;
+    --blanco: #ffffff;
+    --negro: #282522;
+    --cafe: #6b5146;
+    --gris: #77716d;
+    --borde: #e4e0dc;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; 
+}
+
+
+body {
+    margin: 0;
+    background-color: var(--fondo);
+    color: var(--negro);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.2;
+    font-weight: normal;
+}
+
+h1 { font-size: 5.8rem; }
+h2 { font-size: 3.6rem; }
+h3 { font-size: 2.4rem; }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    color: var(--gris);
+}
+
+/* Encabezado y menú */
+.aviso {
+    background-color: var(--negro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 9px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.barra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 24px 0;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.navegacion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.navegacion a {
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.navegacion a:hover,
+.navegacion a[aria-current="page"] {
+    color: var(--cafe);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+/* Portada */
+.portada {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 480px;
+    background-color: #efebe6;
+}
+
+.portada__texto {
+    padding: 70px 12%;
+    align-self: center;
+}
+
+.portada h1 {
+    margin: 15px 0;
+}
+
+.etiqueta {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--cafe);
+}
+
+.boton {
+    display: inline-block;
+    background-color: var(--negro);
+    border: 1px solid var(--negro);
+    color: var(--blanco);
+    padding: 12px 25px;
+    margin-top: 15px;
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: var(--cafe);
+    border-color: var(--cafe);
+}
+
+.boton--claro {
+    background-color: transparent;
+    color: var(--negro);
+}
+
+/* fotos del local/ropa/muestras del inventario etc. */
+.foto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    color: #a7a29e;
+    padding: 20px;
+    font-size: 13px;
+    aspect-ratio: 3 / 4;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.foto--portada {
+    min-height: 480px;
+    aspect-ratio: auto;
+}
+
+.foto--ancha {
+    aspect-ratio: 5/ 3;
+}
+
+/* Secciones y tarjetas */
+.seccion {
+    padding: 60px 0;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin: 0 0 32px;
+}
+
+.titulo-seccion p {
+    margin: 5px 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tarjeta h3 {
+    margin: 15px 0 4px;
+}
+
+.tarjeta p {
+    margin: 3px 0;
+    font-size: 14px;
+}
+
+.precio {
+    color: var(--negro);
+    font-weight: bold;
+}
+
+.precio-anterior {
+    color: var(--gris);
+    text-decoration: line-through;
+    margin-right: 8px;
+}
+
+.enlace {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--cafe);
+    border-bottom: 1px solid var(--cafe);
+    font-size: 14px;
+}
+
+/* Páginas interiores */
+.encabezado-pagina {
+    padding: 45px 0 25px;
+    text-align: center;
+}
+
+.encabezado-pagina h1 {
+    margin: 0;
+    font-size: 48px;
+}
+
+.contenido-dos-columnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.caja {
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    padding: 30px;
+}
+
+.caja h2 {
+    margin-top: 0;
+}
+
+.dato {
+    border-bottom: 1px solid var(--borde);
+    padding: 12px 0;
+}
+
+/* Formulario de ejemplo, sin envío */
+.formulario {
+    max-width: 680px;
+    margin: 0 auto;
+    background-color: var(--blanco);
+    padding: 35px;
+    border: 1px solid var(--borde);
+}
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.campo input,
+.campo textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--borde);
+    background-color: #fff;
+    font: inherit;
+}
+
+.campo textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.aviso-formulario {
+    font-size: 12px;
+}
+
+.footer {
+    background-color: var(--negro);
+    color: var(--blanco);
+    margin-top: 40px;
+    padding: 30px 0;
+}
+
+.footer .barra {
+    padding: 0;
+}
+
+.footer p {
+    color: #d3d0ce;
+    margin: 0;
+    font-size: 12px;
+}
+
+.footer .navegacion a:hover {
+    color: #fff;
+}
+
+/*tablet */
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .portada h1 {
+        font-size: 4.4rem;
+    }
+    .barra {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .navegacion {
+        justify-content: center;
+    }
+}
+
+/*celular */
+@media (max-width: 600px) { /*max-width 600 es mejor que min-width 768 para recibir una mejor calificacion para mobiles en lighthouse */
+    .portada,
+    .contenido-dos-columnas,
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .portada__texto {
+        padding: 40px 8%;
+    }
+    .portada h1,
+    .encabezado-pagina h1 {
+        font-size: 3.8rem;
+    }
+    .foto--portada {
+        min-height: 300px;
+    }
+    .seccion {
+        padding: 35px 0;
+    }
+    .formulario {
+        padding: 2rem;
+    }
+}
+
+
+/* ===== Animaciones ===== */
+
+/* Menú fijo de lado a lado */
+header.contenedor {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background-color: var(--fondo);
+    transition: transform .4s ease, box-shadow .3s ease;
+}
+
+header.contenedor .barra {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header.contenedor.sombra {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+}
+
+header.contenedor.oculto {
+    transform: translateY(-110%);
+}
+
+/* Línea animada bajo los enlaces del menú */
+.navegacion a {
+    position: relative;
+    text-decoration: none;
+}
+
+.navegacion a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .35s ease;
+}
+
+.navegacion a:hover::after,
+.navegacion a[aria-current="page"]::after {
+    transform: scaleX(1);
+}
+
+/* Botones y enlaces */
+.boton,
+.enlace {
+    transition: transform .3s ease, background-color .3s ease, color .3s ease;
+}
+
+.boton:hover {
+    transform: translateY(-3px);
+}
+
+.enlace:hover {
+    transform: translateX(4px);
+}
+
+/* Entrada de la página */
+body {
+    animation: entrar .6s ease both;
+}
+
+@keyframes entrar {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Aparecer al hacer scroll (la clase .rv la agrega js/script.js) */
+.rv {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity .9s ease, transform .9s ease;
+    transition-delay: var(--retraso, 0s);
+}
+
+.rv.visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* imagenes disminuida*/
+.foto {
+    overflow: hidden;
+}
+
+.foto img.carga {
+    opacity: 0;
+    filter: blur(16px);
+    transform: scale(1.06);
+    transition: opacity .9s ease, filter .9s ease, transform 1.2s ease;
+}
+
+.foto img.carga.lista {
+    opacity: 1;
+    filter: none;
+    transform: none;
+}
+
+.tarjeta:hover .foto img.carga.lista {
+    transform: scale(1.045);
+}
+
+.foto--portada img.carga.lista {
+    animation: zoom-lento 16s ease-in-out infinite alternate;
+}
+
+@keyframes zoom-lento {
+    from { transform: scale(1); }
+    to { transform: scale(1.06); }
+}
+
+/* Foco visible para quien navega con teclado */
+.menu-boton:focus-visible,
+.chip:focus-visible,
+.detalle-boton:focus-visible,
+.faq__pregunta:focus-visible,
+.flotante:focus-visible,
+.filtros__buscar input:focus-visible,
+.limpiar-filtros:focus-visible {
+    outline: 2px solid var(--cafe);
+    outline-offset: 3px;
+}
+
+/* Botón del menú para celular (en pantallas grandes no se ve, aveces) */
+.menu-boton {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background: none;
+    border: 1px solid var(--borde);
+    cursor: pointer;
+}
+
+.menu-boton span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--negro);
+    transition: transform .3s ease, opacity .2s ease;
+}
+
+.menu-boton[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-boton[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-boton[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Paneles que se abren y se cierran (detalles de producto y preguntas frecuentes).
+   Si el JS no carga, quedan abiertos para que nadie se pierda el contenido. */
+.desplegable > div {
+    min-height: 0;
+    overflow: hidden;
+}
+
+.js .desplegable {
+    display: grid;
+    grid-template-rows: 0fr;
+    visibility: hidden;
+    transition: grid-template-rows .4s ease, visibility 0s linear .4s;
+}
+
+.js .desplegable.abierto {
+    grid-template-rows: 1fr;
+    visibility: visible;
+    transition: grid-template-rows .4s ease, visibility 0s;
+}
+
+/* Descripción expandible de cada prenda */
+.detalle-boton {
+    margin-top: 12px;
+    padding: 0 0 2px;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid var(--cafe);
+    color: var(--cafe);
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+
+.detalle-boton::after {
+    content: "+";
+    margin-left: 8px;
+}
+
+.detalle-boton[aria-expanded="true"]::after {
+    content: "−";
+}
+
+.detalle-boton:hover {
+    transform: translateX(4px);
+}
+
+.detalle p {
+    margin: 12px 0 0;
+    line-height: 1.7;
+}
+
+/* Buscador y filtros del catálogo */
+.filtros {
+    display: none;
+    margin-bottom: 32px;
+}
+
+.js .filtros {
+    display: block;
+}
+
+.filtros__buscar label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.filtros__buscar input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--borde);
+    background-color: #fff;
+    font: inherit;
+}
+
+.filtros__grupos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.chip {
+    padding: 8px 16px;
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    color: var(--negro);
+    font-size: 13px;
+    letter-spacing: .5px;
+    cursor: pointer;
+    transition: background-color .3s ease, color .3s ease, border-color .3s ease;
+}
+
+.chip:hover {
+    border-color: var(--cafe);
+    color: var(--cafe);
+}
+
+.chip[aria-pressed="true"] {
+    background-color: var(--negro);
+    border-color: var(--negro);
+    color: var(--blanco);
+}
+
+.filtros__estado {
+    margin: 14px 0 0;
+    font-size: 13px;
+}
+
+.sin-resultados {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.limpiar-filtros {
+    padding: 0 0 1px;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid var(--cafe);
+    color: var(--cafe);
+    font-size: inherit;
+    cursor: pointer;
+}
+
+.tarjeta.entra {
+    animation: entra-tarjeta .45s ease backwards;
+}
+
+@keyframes entra-tarjeta {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: none; }
+}
+
+/* Preguntas frecuentes */
+.faq {
+    max-width: 760px;
+    margin: 0 auto;
+    border-top: 1px solid var(--borde);
+}
+
+.faq__item {
+    border-bottom: 1px solid var(--borde);
+}
+
+.faq__titulo {
+    margin: 0;
+}
+
+.faq__pregunta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    padding: 22px 4px;
+    background: none;
+    border: 0;
+    color: var(--negro);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 2rem;
+    line-height: 1.3;
+    text-align: left;
+    cursor: pointer;
+    transition: color .3s ease;
+}
+
+.faq__pregunta:hover {
+    color: var(--cafe);
+}
+
+.faq__icono {
+    position: relative;
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.faq__icono::before,
+.faq__icono::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transition: transform .35s ease;
+}
+
+.faq__icono::after {
+    transform: rotate(90deg);
+}
+
+.faq__pregunta[aria-expanded="true"] .faq__icono::after {
+    transform: rotate(0deg);
+}
+
+.faq__respuesta p {
+    margin: 0;
+    padding: 0 40px 24px 4px;
+    line-height: 1.7;
+}
+
+.faq__respuesta a {
+    color: var(--cafe);
+    border-bottom: 1px solid var(--cafe);
+}
+
+.caja--centrada {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Botones flotantes: llamar y volver arriba */
+.flotantes {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.flotante {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-sizing: border-box;
+    min-width: 48px;
+    height: 48px;
+    padding: 0 14px;
+    background-color: var(--negro);
+    border: 1px solid var(--negro);
+    color: var(--blanco);
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .18);
+    transition: opacity .3s ease, transform .3s ease, visibility .3s ease, background-color .3s ease, border-color .3s ease;
+}
+
+.flotante svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.flotante--llamar {
+    padding: 0 18px;
+    background-color: var(--cafe);
+    border-color: var(--cafe);
+}
+
+.flotante--llamar:hover {
+    background-color: var(--negro);
+    border-color: var(--negro);
+    transform: translateY(-3px);
+}
+
+/* El botón de subir ocupa su lugar aunque no se vea, así "Llamar" no se mueve */
+.flotante--subir {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+}
+
+.flotante--subir.mostrar {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+
+.flotante--subir.mostrar:hover {
+    background-color: var(--cafe);
+    border-color: var(--cafe);
+    transform: translateY(-3px);
+}
+
+/* Menú desplegable en celular */
+@media (max-width: 600px) {
+    header.contenedor .barra {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0;
+        padding: 14px 0;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    .menu-boton {
+        display: flex;
+    }
+
+    .navegacion {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 0;
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .navegacion a {
+        padding: 14px 0;
+        border-top: 1px solid var(--borde);
+        font-size: 1.3rem;
+    }
+
+    .navegacion a::after {
+        display: none;
+    }
+
+    .navegacion a[aria-current="page"] {
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    /* Cerrado por defecto (solo si el JS está activo) */
+    .js .navegacion {
+        max-height: 0;
+        margin-top: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition: max-height .4s ease, margin-top .4s ease, opacity .3s ease, visibility 0s linear .4s;
+    }
+
+    .js .navegacion.abierto {
+        max-height: 420px;
+        margin-top: 12px;
+        opacity: 1;
+        visibility: visible;
+        transition: max-height .4s ease, margin-top .4s ease, opacity .3s ease, visibility 0s;
+    }
+
+    .flotantes {
+        right: 14px;
+        bottom: 14px;
+    }
+
+    .faq__pregunta {
+        font-size: 1.8rem;
+    }
+
+    .faq__respuesta p {
+        padding-right: 4px;
+    }
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MARJEL: preguntas frecuentes sobre tallas, horarios, pagos y cambios. Proyecto de demostración.">
+    <title>Preguntas frecuentes | MARJEL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+</head>
+<body>
+    <div class="aviso">MARJEL · ESTILO PARA CADA DÍA</div>
+    <header class="contenedor">
+        <div class="barra">
+            <a class="logo" href="index.html">MARJEL</a>
+            <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="navegacion" id="menu-principal" aria-label="Menú principal">
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="ofertas.html">Ofertas</a>
+                <a href="preguntas.html" aria-current="page">Preguntas</a>
+                <a href="ubicacion.html">Ubicación</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+    <main class="contenedor">
+        <div class="encabezado-pagina">
+            <span class="etiqueta">Resolvemos tus dudas</span>
+            <h1>Preguntas frecuentes</h1>
+            <p>Juntamos aquí lo que más nos preguntan en tienda. Si la tuya no está, escríbenos.</p>
+        </div>
+        <section class="seccion">
+            <div class="faq">
+                <div class="faq__item">
+                    <h3 class="faq__titulo">
+                        <button class="faq__pregunta" type="button" id="faq-boton-1" aria-expanded="false" aria-controls="faq-1">
+                            ¿Qué tallas manejan?
+                            <span class="faq__icono" aria-hidden="true"></span>
+                        </button>
+                    </h3>
+                    <div class="desplegable faq__respuesta" id="faq-1">
+                        <div>
+                            <p>Todas las prendas del catálogo vienen en CH, M y G. Si dudas entre dos tallas, lo mejor es pasar a probártelas al local: cada prenda cae distinto y a veces la talla de siempre no es la que mejor te acomoda.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <h3 class="faq__titulo">
+                        <button class="faq__pregunta" type="button" id="faq-boton-2" aria-expanded="false" aria-controls="faq-2">
+                            ¿Puedo probarme la ropa antes de comprarla?
+                            <span class="faq__icono" aria-hidden="true"></span>
+                        </button>
+                    </h3>
+                    <div class="desplegable faq__respuesta" id="faq-2">
+                        <div>
+                            <p>Sí, y con calma. Hay probador en la tienda, así que solo ven en horario de atención y pide lo que quieras medirte.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <h3 class="faq__titulo">
+                        <button class="faq__pregunta" type="button" id="faq-boton-3" aria-expanded="false" aria-controls="faq-3">
+                            ¿Cuál es el horario de atención?
+                            <span class="faq__icono" aria-hidden="true"></span>
+                        </button>
+                    </h3>
+                    <div class="desplegable faq__respuesta" id="faq-3">
+                        <div>
+                            <p>Abrimos de lunes a viernes, de 10:00 AM a 8:00 PM. Los sábados y domingos la tienda permanece cerrada.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <h3 class="faq__titulo">
+                        <button class="faq__pregunta" type="button" id="faq-boton-4" aria-expanded="false" aria-controls="faq-4">
+                            ¿Dónde se encuentra la tienda?
+                            <span class="faq__icono" aria-hidden="true"></span>
+                        </button>
+                    </h3>
+                    <div class="desplegable faq__respuesta" id="faq-4">
+                        <div>
+                            <p>En la Calle de la Capilla, en Cerrito Colorado, Tuxpan, Michoacán (C. P. 61440). En la página de <a href="ubicacion.html">Ubicación</a> tienes el mapa por si te ayuda a llegar.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <h3 class="faq__titulo">
+                        <button class="faq__pregunta" type="button" id="faq-boton-5" aria-expanded="false" aria-controls="faq-5">
+                            ¿Cómo puedo pagar?
+                            <span class="faq__icono" aria-hidden="true"></span>
+                        </button>
+                    </h3>
+                    <div class="desplegable faq__respuesta" id="faq-5">
+                        <div>
+                            <p>En tienda aceptamos efectivo y tarjeta. Si prefieres pagar por transferencia, pregúntanos antes cómo hacerlo para no complicarte en el momento.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <h3 class="faq__titulo">
+                        <button class="faq__pregunta" type="button" id="faq-boton-6" aria-expanded="false" aria-controls="faq-6">
+                            ¿Puedo cambiar una prenda si no me queda?
+                            <span class="faq__icono" aria-hidden="true"></span>
+                        </button>
+                    </h3>
+                    <div class="desplegable faq__respuesta" id="faq-6">
+                        <div>
+                            <p>Sí, tienes 7 días para cambiarla por otra talla o por otro modelo. Solo necesitamos que no esté usada ni lavada y que traigas tu ticket y la etiqueta. Las prendas en oferta se cambian por talla, pero no se devuelve el dinero.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <h3 class="faq__titulo">
+                        <button class="faq__pregunta" type="button" id="faq-boton-7" aria-expanded="false" aria-controls="faq-7">
+                            ¿Los precios de la página son los definitivos?
+                            <span class="faq__icono" aria-hidden="true"></span>
+                        </button>
+                    </h3>
+                    <div class="desplegable faq__respuesta" id="faq-7">
+                        <div>
+                            <p>Son precios de muestra y pueden cambiar según la temporada. Antes de ir por algo que te gustó, llámanos o mándanos un mensaje para confirmar el precio y que siga disponible.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <h3 class="faq__titulo">
+                        <button class="faq__pregunta" type="button" id="faq-boton-8" aria-expanded="false" aria-controls="faq-8">
+                            ¿Cómo cuido mis prendas para que duren más?
+                            <span class="faq__icono" aria-hidden="true"></span>
+                        </button>
+                    </h3>
+                    <div class="desplegable faq__respuesta" id="faq-8">
+                        <div>
+                            <p>Lo ideal es seguir la etiqueta de cada una. Como regla general funciona bien lavar con agua fría, del revés y sin exprimir con fuerza. El lino y la mezclilla se llevan mejor con el tendedero que con la secadora.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="caja caja--centrada">
+                <span class="etiqueta">¿Sigues con dudas?</span>
+                <h2>Platícanos qué necesitas</h2>
+                <p>Escríbenos desde la página de contacto o márcanos al <strong>+52 1 786 131 3423</strong>. Te respondemos en horario de atención.</p>
+                <a class="boton" href="contacto.html">Ir a contacto</a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="contenedor barra">
+            <a class="logo" href="index.html">MARJEL</a>
+            <div>
+                <p>Propuesta de tienda de ropa · Proyecto escolar</p>
+                <p>Las prendas y los precios son ejemplos de diseño.</p>
+            </div>
+        </div>
+    </footer>
+    <div class="flotantes">
+        <a class="flotante flotante--llamar" href="tel:+5217861313423" aria-label="Llamar a MARJEL">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Llamar</span>
+        </a>
+        <button class="flotante flotante--subir" type="button" aria-label="Volver arriba">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+        </button>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
